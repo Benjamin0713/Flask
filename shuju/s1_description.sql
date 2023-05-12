@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : syh
-Source Server Version : 80032
+Source Server         : localhost
+Source Server Version : 50514
 Source Host           : localhost:3306
-Source Database       : show
+Source Database       : supplementary_tables
 
 Target Server Type    : MYSQL
-Target Server Version : 80032
+Target Server Version : 50514
 File Encoding         : 65001
 
-Date: 2023-05-11 11:02:28
+Date: 2023-05-11 16:53:27
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -20,7 +20,7 @@ SET FOREIGN_KEY_CHECKS=0;
 -- ----------------------------
 DROP TABLE IF EXISTS `s1_description`;
 CREATE TABLE `s1_description` (
-  `id` int NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `Biovar` varchar(255) DEFAULT NULL,
   `Time` varchar(255) DEFAULT NULL,
   `Province` varchar(255) DEFAULT NULL,
@@ -28,11 +28,11 @@ CREATE TABLE `s1_description` (
   `Country` varchar(255) DEFAULT NULL,
   `Continent` varchar(255) DEFAULT NULL,
   `Source` varchar(255) DEFAULT NULL,
-  `Total_sample_size` int DEFAULT NULL,
-  `Positive_sample_size` int DEFAULT NULL,
+  `Total_sample_size` int(11) DEFAULT NULL,
+  `Positive_sample_size` int(11) DEFAULT NULL,
   `positive_rate` double DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=528 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=551 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of s1_description
@@ -53,8 +53,8 @@ INSERT INTO `s1_description` VALUES ('13', 'bvSP', '2018', 'Guizhou', 'Western C
 INSERT INTO `s1_description` VALUES ('14', 'bvSP', '2018', 'Guizhou', 'Western China', 'China', 'Asia', 'chicken ', '107', '4', '3.738317757');
 INSERT INTO `s1_description` VALUES ('15', 'bvSP', '2018', 'Guizhou', 'Western China', 'China', 'Asia', 'chicken ', '815', '65', '7.9754601227');
 INSERT INTO `s1_description` VALUES ('16', 'bvSP', '2018', 'Guizhou', 'Western China', 'China', 'Asia', 'chicken ', '1051', '182', '17.316841104');
-INSERT INTO `s1_description` VALUES ('17', 'bvSP', '2016-2018', 'Jiangsu, Anhui', 'NA', 'China', 'Asia', 'chicken ', '195', '82', '42.051282051');
-INSERT INTO `s1_description` VALUES ('18', 'bvSP', '2016-2018', 'Jiangsu, Anhui', 'NA', 'China', 'Asia', 'other poultry', '242', '0', '0');
+INSERT INTO `s1_description` VALUES ('17', 'bvSP', '2016-2018', 'Jiangsu', 'NA', 'China', 'Asia', 'chicken ', '219', '41', '18.721461');
+INSERT INTO `s1_description` VALUES ('18', 'bvSP', '2016-2018', 'Anhui', 'NA', 'China', 'Asia', 'chicken ', '218', '41', '18.807339');
 INSERT INTO `s1_description` VALUES ('19', 'bvSP', '2019', 'Shandong', 'Eastern China', 'China', 'Asia', 'chicken ', '90', '46', '51.111111111');
 INSERT INTO `s1_description` VALUES ('20', 'bvSP', '2019', 'Shandong', 'Eastern China', 'China', 'Asia', 'chicken ', '90', '16', '17.777777778');
 INSERT INTO `s1_description` VALUES ('21', 'bvSP', '2019', 'Shandong', 'Eastern China', 'China', 'Asia', 'chicken ', '90', '24', '26.666666667');
@@ -87,8 +87,8 @@ INSERT INTO `s1_description` VALUES ('47', 'bvSG', '2016-2019', 'Sichuan', 'West
 INSERT INTO `s1_description` VALUES ('48', 'bvSP', '2016-2018', 'Jiangsu', 'Eastern China', 'China', 'Asia', 'chicken ', '1264', '4', '0.3164556962');
 INSERT INTO `s1_description` VALUES ('49', 'bvSP', '2018', 'Guangdong', 'Eastern China', 'China', 'Asia', 'chicken ', '117', '18', '15.384615385');
 INSERT INTO `s1_description` VALUES ('50', 'bvSP', '2016', 'Liaoning', 'Eastern China', 'China', 'Asia', 'chicken ', '385', '48', '12.467532468');
-INSERT INTO `s1_description` VALUES ('51', 'bvSP', '2015', 'Hubei, Henan, Hunan', 'Central China', 'China', 'Asia', 'chicken ', '1241', '11', '0.88638195004');
-INSERT INTO `s1_description` VALUES ('52', 'bvSP', '2016-2017', 'Hubei, Henan, Hunan', 'Central China', 'China', 'Asia', 'chicken ', '2483', '23', '0.92629883206');
+INSERT INTO `s1_description` VALUES ('51', 'bvSP', '2015', 'Hubei', 'Central China', 'China', 'Asia', 'chicken ', '2068', '11', '0.531915');
+INSERT INTO `s1_description` VALUES ('52', 'bvSP', '2016-2017', 'Henan', 'Central China', 'China', 'Asia', 'chicken ', '2069', '11', '0.531658');
 INSERT INTO `s1_description` VALUES ('53', 'unclear', '2019', 'Shanghai', 'Eastern China', 'China', 'Asia', 'chicken ', '615', '13', '2.1138211382');
 INSERT INTO `s1_description` VALUES ('54', 'bvSP', '2018', 'Guizhou', 'Western China', 'China', 'Asia', 'chicken ', '1456', '127', '8.7225274725');
 INSERT INTO `s1_description` VALUES ('55', 'bvSP', '2018', 'Guizhou', 'Western China', 'China', 'Asia', 'chicken ', '1098', '174', '15.846994536');
@@ -213,8 +213,8 @@ INSERT INTO `s1_description` VALUES ('173', 'bvSP', '2012-2013', 'Liaoning', 'Ea
 INSERT INTO `s1_description` VALUES ('174', 'bvSP', '2012-2013', 'Liaoning', 'Eastern China', 'China', 'Asia', 'other poultry', '59', '5', '8.4745762712');
 INSERT INTO `s1_description` VALUES ('175', 'bvSP', '2012-2013', 'Liaoning', 'Eastern China', 'China', 'Asia', 'chicken ', '627', '2', '0.31897926635');
 INSERT INTO `s1_description` VALUES ('176', 'bvSP', '2012-2013', 'Liaoning', 'Eastern China', 'China', 'Asia', 'chicken ', '30', '13', '43.333333333');
-INSERT INTO `s1_description` VALUES ('177', 'bvSP', '2010', 'Guangxi, Guangdong', 'NA', 'China', 'Asia', 'chicken ', '75', '20', '26.666666667');
-INSERT INTO `s1_description` VALUES ('178', 'bvSP', '2011', 'Guangxi, Guangdong', 'NA', 'China', 'Asia', 'chicken ', '75', '20', '26.666666667');
+INSERT INTO `s1_description` VALUES ('177', 'bvSP', '2010', 'Guangxi', 'NA', 'China', 'Asia', 'chicken ', '75', '20', '26.666666667');
+INSERT INTO `s1_description` VALUES ('178', 'bvSP', '2011', 'Guangdong', 'NA', 'China', 'Asia', 'chicken ', '75', '20', '26.666666667');
 INSERT INTO `s1_description` VALUES ('179', 'bvSP', '2013', 'Beijing', 'Eastern China', 'China', 'Asia', 'chicken ', '5193', '268', '5.1607933757');
 INSERT INTO `s1_description` VALUES ('180', 'bvSP', '2013', 'Beijing', 'Eastern China', 'China', 'Asia', 'chicken ', '10000', '669', '6.69');
 INSERT INTO `s1_description` VALUES ('181', 'bvSP', '2013', 'Hebei', 'Eastern China', 'China', 'Asia', 'chicken ', '300', '100', '33.333333333');
@@ -238,8 +238,8 @@ INSERT INTO `s1_description` VALUES ('198', 'bvSP', '2013', 'Shandong', 'Eastern
 INSERT INTO `s1_description` VALUES ('199', 'bvSP', '2009', 'Hebei', 'Eastern China', 'China', 'Asia', 'chicken ', '1050', '5', '0.47619047619');
 INSERT INTO `s1_description` VALUES ('200', 'bvSP', '2010', 'Jilin', 'Central China', 'China', 'Asia', 'chicken ', '225', '50', '22.222222222');
 INSERT INTO `s1_description` VALUES ('201', 'bvSG', '2010', 'Jilin', 'Central China', 'China', 'Asia', 'chicken ', '225', '37', '16.444444444');
-INSERT INTO `s1_description` VALUES ('202', 'bvSP', '2010', 'Jiangsu, Anhui', 'NA', 'China', 'Asia', 'chicken ', '473', '18', '3.8054968288');
-INSERT INTO `s1_description` VALUES ('203', 'bvSP', '2011-2012', 'Jiangsu, Anhui', 'NA', 'China', 'Asia', 'chicken ', '947', '37', '3.9070749736');
+INSERT INTO `s1_description` VALUES ('202', 'bvSP', '2010', 'Jiangsu', 'NA', 'China', 'Asia', 'chicken ', '710', '27', '3.802817');
+INSERT INTO `s1_description` VALUES ('203', 'bvSP', '2011-2012', 'Anhui', 'NA', 'China', 'Asia', 'chicken ', '710', '28', '3.943662');
 INSERT INTO `s1_description` VALUES ('204', 'bvSP', '2012', 'Beijing', 'Eastern China', 'China', 'Asia', 'chicken ', '1389', '396', '28.509719222');
 INSERT INTO `s1_description` VALUES ('205', 'bvSP', '2012', 'Beijing', 'Eastern China', 'China', 'Asia', 'chicken ', '2065', '599', '29.007263923');
 INSERT INTO `s1_description` VALUES ('206', 'bvSP', '2012', 'Beijing', 'Eastern China', 'China', 'Asia', 'chicken ', '2073', '767', '36.999517607');
@@ -305,16 +305,9 @@ INSERT INTO `s1_description` VALUES ('265', 'bvSP', '2001-2004', 'Qinghai', 'Wes
 INSERT INTO `s1_description` VALUES ('266', 'bvSP', '2000', 'Qinghai', 'Western China', 'China', 'Asia', 'chicken ', '617', '18', '2.9173419773');
 INSERT INTO `s1_description` VALUES ('267', 'bvSP', '2001-2004', 'Qinghai', 'Western China', 'China', 'Asia', 'chicken ', '154', '4', '2.5974025974');
 INSERT INTO `s1_description` VALUES ('268', 'bvSP', '2004', 'Zhejiang', 'Eastern China', 'China', 'Asia', 'chicken ', '377', '79', '20.954907162');
-INSERT INTO `s1_description` VALUES ('269', 'unclear', '2005', 'Henan, Jiangsu, Shanghai', 'NA', 'China', 'Asia', 'chicken ', '120', '0', '0');
-INSERT INTO `s1_description` VALUES ('270', 'unclear', '2005', 'Henan, Jiangsu, Shanghai', 'NA', 'China', 'Asia', 'chicken ', '102', '40', '39.215686275');
-INSERT INTO `s1_description` VALUES ('271', 'unclear', '2005', 'Henan, Jiangsu, Shanghai', 'NA', 'China', 'Asia', 'chicken ', '28', '10', '35.714285714');
-INSERT INTO `s1_description` VALUES ('272', 'unclear', '2005', 'Henan, Jiangsu, Shanghai', 'NA', 'China', 'Asia', 'chicken ', '1061', '141', '13.28934967');
-INSERT INTO `s1_description` VALUES ('273', 'unclear', '2005', 'Henan, Jiangsu, Shanghai', 'NA', 'China', 'Asia', 'chicken ', '87', '1', '1.1494252874');
-INSERT INTO `s1_description` VALUES ('274', 'unclear', '2005', 'Henan, Jiangsu, Shanghai', 'NA', 'China', 'Asia', 'chicken ', '217', '66', '30.414746544');
-INSERT INTO `s1_description` VALUES ('275', 'unclear', '2005', 'Henan, Jiangsu, Shanghai', 'NA', 'China', 'Asia', 'chicken ', '166', '14', '8.4337349398');
-INSERT INTO `s1_description` VALUES ('276', 'unclear', '2005', 'Henan, Jiangsu, Shanghai', 'NA', 'China', 'Asia', 'chicken ', '500', '77', '15.4');
-INSERT INTO `s1_description` VALUES ('277', 'unclear', '2005', 'Henan, Jiangsu, Shanghai', 'NA', 'China', 'Asia', 'chicken ', '159', '7', '4.4025157233');
-INSERT INTO `s1_description` VALUES ('278', 'unclear', '2005', 'Henan, Jiangsu, Shanghai', 'NA', 'China', 'Asia', 'chicken ', '344', '60', '17.441860465');
+INSERT INTO `s1_description` VALUES ('269', 'unclear', '2005', 'Henan', 'NA', 'China', 'Asia', 'chicken ', '888', '139', '15.653153');
+INSERT INTO `s1_description` VALUES ('270', 'unclear', '2005', 'Jiangsu', 'NA', 'China', 'Asia', 'chicken ', '888', '139', '15.653153');
+INSERT INTO `s1_description` VALUES ('271', 'unclear', '2005', 'Shanghai', 'NA', 'China', 'Asia', 'chicken ', '888', '138', '15.540541');
 INSERT INTO `s1_description` VALUES ('279', 'bvSP', '2002', 'Qinghai', 'Western China', 'China', 'Asia', 'chicken ', '385', '1', '0.25974025974');
 INSERT INTO `s1_description` VALUES ('280', 'bvSP', '2002', 'Qinghai', 'Western China', 'China', 'Asia', 'chicken ', '685', '10', '1.4598540146');
 INSERT INTO `s1_description` VALUES ('281', 'bvSP', '1996-2000', 'Guangdong', 'Eastern China', 'China', 'Asia', 'chicken ', '5364', '1212', '22.5950783');
@@ -453,8 +446,8 @@ INSERT INTO `s1_description` VALUES ('413', 'bvSP', '2017', 'Shandong', 'Eastern
 INSERT INTO `s1_description` VALUES ('414', 'bvSP', '2010', 'Guizhou', 'Western China', 'China', 'Asia', 'chicken ', '2255', '693', '30.731707317');
 INSERT INTO `s1_description` VALUES ('415', 'bvSP', '2015', 'Shandong', 'Eastern China', 'China', 'Asia', 'other poultry', '59', '24', '40.677966102');
 INSERT INTO `s1_description` VALUES ('416', 'bvSG', '2015', 'Shandong', 'Eastern China', 'China', 'Asia', 'other poultry', '59', '4', '6.7796610169');
-INSERT INTO `s1_description` VALUES ('417', 'bvSP', '2012-2013', 'Jiangsu, Anhui', 'NA', 'China', 'Asia', 'other poultry', '532', '10', '1.8796992481');
-INSERT INTO `s1_description` VALUES ('418', 'bvSP', '2011-2012', 'Jiangsu, Anhui', 'NA', 'China', 'Asia', 'other poultry', '1730', '78', '4.5086705202');
+INSERT INTO `s1_description` VALUES ('417', 'bvSP', '2012-2013', 'Jiangsu', 'NA', 'China', 'Asia', 'other poultry', '1131', '44', '3.890363');
+INSERT INTO `s1_description` VALUES ('418', 'bvSP', '2011-2012', 'Anhui', 'NA', 'China', 'Asia', 'other poultry', '1131', '44', '3.890363');
 INSERT INTO `s1_description` VALUES ('419', 'bvSP', '1998', 'Guangdong', 'Eastern China', 'China', 'Asia', 'other poultry', '74', '5', '6.7567567568');
 INSERT INTO `s1_description` VALUES ('420', 'bvSP', '2001', 'Gansu', 'Western China', 'China', 'Asia', 'other poultry', '134', '35', '26.119402985');
 INSERT INTO `s1_description` VALUES ('421', 'bvSP', '2019', 'Shandong', 'Eastern China', 'China', 'Asia', 'chicken ', '24', '7', '29.166666667');
@@ -468,14 +461,6 @@ INSERT INTO `s1_description` VALUES ('428', 'unclear', 'From September to Octobe
 INSERT INTO `s1_description` VALUES ('429', 'unclear', 'From September to October 2006', 'NA', 'NA', 'Mexico', 'North America', 'wild birds', '123', '26', '21.138211382');
 INSERT INTO `s1_description` VALUES ('430', 'bvSG', '2010', 'NA', 'NA', 'Korea', 'Asia', 'chicken', '116', '8', '6.8965517241');
 INSERT INTO `s1_description` VALUES ('431', 'bvSG', '2011-2012', 'NA', 'NA', 'Korea', 'Asia', 'chicken', '234', '18', '7.6923076923');
-INSERT INTO `s1_description` VALUES ('432', 'unclear', '2006-2010', '12 provinces Anhui, Jiangsu, Shandong, Shanghai, and Zhejiang provinces), central (Henan), northeastern (Heilongjiang), northwestern (Xinjiang), northern (Beijing and Hebei), southwestern (Sichuan), and southern (Guangdong)', 'NA', 'China', 'Asia', 'other poultry', '1108', '0', '0');
-INSERT INTO `s1_description` VALUES ('433', 'unclear', '2011-2012', '12 provinces Anhui, Jiangsu, Shandong, Shanghai, and Zhejiang provinces), central (Henan), northeastern (Heilongjiang), northwestern (Xinjiang), northern (Beijing and Hebei), southwestern (Sichuan), and southern (Guangdong)', 'NA', 'China', 'Asia', 'other poultry', '443', '0', '0');
-INSERT INTO `s1_description` VALUES ('434', 'bvSP', '2006-2010', '12 provinces Anhui, Jiangsu, Shandong, Shanghai, and Zhejiang provinces), central (Henan), northeastern (Heilongjiang), northwestern (Xinjiang), northern (Beijing and Hebei), southwestern (Sichuan), and southern (Guangdong)', 'NA', 'China', 'Asia', 'other poultry', '220', '3', '1.3636363636');
-INSERT INTO `s1_description` VALUES ('435', 'bvSP', '2011-2012', '12 provinces Anhui, Jiangsu, Shandong, Shanghai, and Zhejiang provinces), central (Henan), northeastern (Heilongjiang), northwestern (Xinjiang), northern (Beijing and Hebei), southwestern (Sichuan), and southern (Guangdong)', 'NA', 'China', 'Asia', 'other poultry', '89', '1', '1.1235955056');
-INSERT INTO `s1_description` VALUES ('436', 'bvSP', '2006-2010', '12 provinces Anhui, Jiangsu, Shandong, Shanghai, and Zhejiang provinces), central (Henan), northeastern (Heilongjiang), northwestern (Xinjiang), northern (Beijing and Hebei), southwestern (Sichuan), and southern (Guangdong)', 'NA', 'China', 'Asia', 'chicken', '1219', '36', '2.953240361');
-INSERT INTO `s1_description` VALUES ('437', 'bvSP', '2011-2012', '12 provinces Anhui, Jiangsu, Shandong, Shanghai, and Zhejiang provinces), central (Henan), northeastern (Heilongjiang), northwestern (Xinjiang), northern (Beijing and Hebei), southwestern (Sichuan), and southern (Guangdong)', 'NA', 'China', 'Asia', 'chicken', '487', '15', '3.0800821355');
-INSERT INTO `s1_description` VALUES ('438', 'bvSG', '2006-2010', '12 provinces Anhui, Jiangsu, Shandong, Shanghai, and Zhejiang provinces), central (Henan), northeastern (Heilongjiang), northwestern (Xinjiang), northern (Beijing and Hebei), southwestern (Sichuan), and southern (Guangdong)', 'NA', 'China', 'Asia', 'chicken', '1219', '6', '0.49220672683');
-INSERT INTO `s1_description` VALUES ('439', 'bvSG', '2011-2012', '12 provinces Anhui, Jiangsu, Shandong, Shanghai, and Zhejiang provinces), central (Henan), northeastern (Heilongjiang), northwestern (Xinjiang), northern (Beijing and Hebei), southwestern (Sichuan), and southern (Guangdong)', 'NA', 'China', 'Asia', 'chicken', '487', '3', '0.6160164271');
 INSERT INTO `s1_description` VALUES ('440', 'bvSG', '2001-2005', 'NA', 'NA', 'India ', 'Asia', 'poultry', '1598', '102', '6.3829787234');
 INSERT INTO `s1_description` VALUES ('441', 'bvSG', '2001-2005', 'NA', 'NA', 'India ', 'Asia', 'human', '2098', '8', '0.38131553861');
 INSERT INTO `s1_description` VALUES ('442', 'bvSG', '2001-2005', 'NA', 'NA', 'India ', 'Asia', 'mammal', '250', '0', '0');
@@ -496,13 +481,10 @@ INSERT INTO `s1_description` VALUES ('456', 'bvSG', 'NA', 'NA', 'NA', 'Banglades
 INSERT INTO `s1_description` VALUES ('457', 'bvSP', 'August 2014 to April 2015', 'Hennan', 'Central China', 'China', 'Asia', 'chicken', '2139', '382', '17.858812529');
 INSERT INTO `s1_description` VALUES ('458', 'bvSG', 'August 2014 to April 2015', 'Hennan', 'Central China', 'China', 'Asia', 'chicken', '2139', '2', '0.093501636279');
 INSERT INTO `s1_description` VALUES ('459', 'bvSP', 'NA', 'Karachi', 'NA', 'Pakistan', 'Asia', 'mammal', '150', '11', '7.3333333333');
-INSERT INTO `s1_description` VALUES ('460', 'bvSP', '2013-2015', 'central China', 'central China', 'China', 'Asia', 'chicken', '42', '19', '45.238095238');
-INSERT INTO `s1_description` VALUES ('461', 'bvSP', '2016-2018', 'central China', 'central China', 'China', 'Asia', 'chicken', '42', '19', '45.238095238');
-INSERT INTO `s1_description` VALUES ('462', 'bvSG', '2013-2015', 'central China', 'central China', 'China', 'Asia', 'chicken', '42', '8', '19.047619048');
-INSERT INTO `s1_description` VALUES ('463', 'bvSG', '2016-2018', 'central China', 'central China', 'China', 'Asia', 'chicken', '42', '8', '19.047619048');
-INSERT INTO `s1_description` VALUES ('464', 'unclear', '2019', 'Shandong, Jiangsu, Anhui, Zhejiang, Fujian, Guangdong, Yunnan, Sichuan, and Chongqing', 'NA', 'China', 'Asia', 'chicken', '3508', '57', '1.6248574686');
-INSERT INTO `s1_description` VALUES ('465', 'bvSP', '2011-2015', 'Anhui, Hubei, Henan, Jiangsu, Shandong', 'NA', 'China', 'Asia', 'chicken', '576', '25', '4.3402777778');
-INSERT INTO `s1_description` VALUES ('466', 'bvSP', '2016', 'Anhui, Hubei, Henan, Jiangsu, Shandong', 'NA', 'China', 'Asia', 'chicken', '116', '5', '4.3103448276');
+INSERT INTO `s1_description` VALUES ('460', 'bvSP', '2013-2015', 'Henan', 'central China', 'China', 'Asia', 'chicken', '42', '19', '45.238095238');
+INSERT INTO `s1_description` VALUES ('461', 'bvSP', '2016-2018', 'Hubei', 'central China', 'China', 'Asia', 'chicken', '42', '19', '45.238095238');
+INSERT INTO `s1_description` VALUES ('462', 'bvSG', '2013-2015', 'Henan', 'central China', 'China', 'Asia', 'chicken', '42', '8', '19.047619048');
+INSERT INTO `s1_description` VALUES ('463', 'bvSG', '2016-2018', 'Hubei', 'central China', 'China', 'Asia', 'chicken', '42', '8', '19.047619048');
 INSERT INTO `s1_description` VALUES ('467', 'bvSP', 'NA', 'NA', 'NA', 'South Africa', 'Africa', 'chicken', '60', '1', '1.6666666667');
 INSERT INTO `s1_description` VALUES ('468', 'bvSP', 'NA', 'NA', 'NA', 'South Africa', 'Africa', 'chicken', '40', '0', '0');
 INSERT INTO `s1_description` VALUES ('469', 'bvSP', 'arch–April 2014', 'NA', 'NA', 'United States', 'North America', 'wild birds', '31', '0', '0');
@@ -557,10 +539,33 @@ INSERT INTO `s1_description` VALUES ('517', 'bvSG', '1954', 'NA', 'NA', 'United 
 INSERT INTO `s1_description` VALUES ('518', 'bvSG', '1954', 'NA', 'NA', 'United Kingdom', 'Europe', 'wild birds', '1', '1', '100');
 INSERT INTO `s1_description` VALUES ('519', 'bvSP', '2002', 'NA', 'NA', 'Brazil', 'South America', 'chicken', '103', '9', '8.7378640777');
 INSERT INTO `s1_description` VALUES ('520', 'bvSG', '2002', 'NA', 'NA', 'Brazil', 'South America', 'chicken', '103', '2', '1.9417475728');
-INSERT INTO `s1_description` VALUES ('521', '', '', '', '', '', '', '', null, null, null);
-INSERT INTO `s1_description` VALUES ('522', '', '', '', '', '', '', '', null, null, null);
-INSERT INTO `s1_description` VALUES ('523', '', '', '', '', '', '', '', null, null, null);
-INSERT INTO `s1_description` VALUES ('524', '', '', '', '', '', '', '', null, null, null);
-INSERT INTO `s1_description` VALUES ('525', '', '', '', '', '', '', '', null, null, null);
-INSERT INTO `s1_description` VALUES ('526', '', '', '', '', '', '', '', null, null, null);
-INSERT INTO `s1_description` VALUES ('527', '', '', '', '', '', '', '', null, null, null);
+INSERT INTO `s1_description` VALUES ('521', 'bvSP', '2016-2017', 'Hunan', 'Central China', 'China', 'Asia', 'chicken ', '2069', '12', '0.58');
+INSERT INTO `s1_description` VALUES ('522', 'bvSP', '2006-2010', 'Anhui', 'NA', 'China', 'Asia', 'other poultry', '168', '5', '2.97619');
+INSERT INTO `s1_description` VALUES ('523', 'bvSP', '2006-2010', 'Jiangsu', 'NA', 'China', 'Asia', 'other poultry', '168', '5', '2.97619');
+INSERT INTO `s1_description` VALUES ('524', 'bvSP', '2006-2010', 'Shandong', 'NA', 'China', 'Asia', 'other poultry', '168', '5', '2.97619');
+INSERT INTO `s1_description` VALUES ('525', 'bvSP', '2006-2010', 'Shanghai', 'NA', 'China', 'Asia', 'other poultry', '168', '5', '2.97619');
+INSERT INTO `s1_description` VALUES ('526', 'bvSP', '2006-2010', 'Zhejiang', 'NA', 'China', 'Asia', 'other poultry', '168', '5', '2.97619');
+INSERT INTO `s1_description` VALUES ('527', 'bvSP', '2006-2010', 'Henan', 'NA', 'China', 'Asia', 'other poultry', '168', '5', '2.97619');
+INSERT INTO `s1_description` VALUES ('528', 'bvSP', '2006-2010', 'Heilongjiang', 'NA', 'China', 'Asia', 'other poultry', '168', '5', '2.97619');
+INSERT INTO `s1_description` VALUES ('529', 'bvSP', '2006-2010', 'Xinjiang', 'NA', 'China', 'Asia', 'other poultry', '168', '5', '2.97619');
+INSERT INTO `s1_description` VALUES ('530', 'bvSP', '2006-2010', 'Beijing', 'NA', 'China', 'Asia', 'other poultry', '168', '4', '2.380952');
+INSERT INTO `s1_description` VALUES ('531', 'bvSP', '2006-2010', 'Hebei', 'NA', 'China', 'Asia', 'other poultry', '168', '4', '2.380952');
+INSERT INTO `s1_description` VALUES ('532', 'bvSP', '2006-2010', 'Sichuan', 'NA', 'China', 'Asia', 'other poultry', '168', '4', '2.380952');
+INSERT INTO `s1_description` VALUES ('533', 'bvSP', '2006-2010', 'Guangdong', 'NA', 'China', 'Asia', 'other poultry', '168', '4', '2.380952');
+INSERT INTO `s1_description` VALUES ('534', 'bvSG', '2006-2010', 'Anhui', 'NA', 'China', 'Asia', 'other poultry', '142', '2', '1.4084507');
+INSERT INTO `s1_description` VALUES ('535', 'bvSG', '2006-2010', 'Jiangsu', 'NA', 'China', 'Asia', 'other poultry', '142', '2', '1.4084507');
+INSERT INTO `s1_description` VALUES ('536', 'bvSG', '2006-2010', 'Shandong', 'NA', 'China', 'Asia', 'other poultry', '142', '2', '1.4084507');
+INSERT INTO `s1_description` VALUES ('537', 'bvSG', '2006-2010', 'Shanghai', 'NA', 'China', 'Asia', 'other poultry', '142', '2', '1.4084507');
+INSERT INTO `s1_description` VALUES ('538', 'bvSG', '2006-2010', 'Zhejiang', 'NA', 'China', 'Asia', 'other poultry', '142', '2', '1.4084507');
+INSERT INTO `s1_description` VALUES ('539', 'bvSG', '2006-2010', 'Henan', 'NA', 'China', 'Asia', 'other poultry', '142', '2', '1.4084507');
+INSERT INTO `s1_description` VALUES ('540', 'bvSG', '2006-2010', 'Heilongjiang', 'NA', 'China', 'Asia', 'other poultry', '142', '2', '1.4084507');
+INSERT INTO `s1_description` VALUES ('541', 'bvSG', '2006-2010', 'Xinjiang', 'NA', 'China', 'Asia', 'other poultry', '142', '2', '1.4084507');
+INSERT INTO `s1_description` VALUES ('542', 'bvSG', '2006-2010', 'Beijing', 'NA', 'China', 'Asia', 'other poultry', '142', '2', '1.4084507');
+INSERT INTO `s1_description` VALUES ('543', 'bvSG', '2006-2010', 'Hebei', 'NA', 'China', 'Asia', 'other poultry', '142', '2', '1.4084507');
+INSERT INTO `s1_description` VALUES ('544', 'bvSG', '2006-2010', 'Sichuan', 'NA', 'China', 'Asia', 'other poultry', '142', '2', '1.4084507');
+INSERT INTO `s1_description` VALUES ('545', 'bvSG', '2006-2010', 'Guangdong', 'NA', 'China', 'Asia', 'other poultry', '142', '2', '1.4084507');
+INSERT INTO `s1_description` VALUES ('546', 'bvSP', '2011-2015', 'Hubei', 'NA', 'China', 'Asia', 'chicken', '138', '6', '4.34782609');
+INSERT INTO `s1_description` VALUES ('547', 'bvSP', '2011-2015', 'Henan', 'NA', 'China', 'Asia', 'chicken', '139', '6', '4.31654676');
+INSERT INTO `s1_description` VALUES ('548', 'bvSP', '2011-2015', 'Jiangsu', 'NA', 'China', 'Asia', 'chicken', '139', '6', '4.31654676');
+INSERT INTO `s1_description` VALUES ('549', 'bvSP', '2011-2015', 'Shandong', 'NA', 'China', 'Asia', 'chicken', '139', '6', '4.31654676');
+INSERT INTO `s1_description` VALUES ('550', 'bvSP', '2011-2015', 'Anhui', 'NA', 'China', 'Asia', 'chicken', '138', '6', '4.34782609');
